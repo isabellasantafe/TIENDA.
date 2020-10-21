@@ -8,7 +8,12 @@ public class Tienda {
     private String barrio;
     private int precios;
     private int personal;
-    private Boolean atencion;
+    private Boolean atencion; 
+
+    //Atributos de compocision//
+    
+    private clientela clientes = null; 
+    private cajero elCajero;
 
     public Tienda(
             String duenoDeLaTienda, 
@@ -23,6 +28,7 @@ public class Tienda {
         this.precios = precios;
         this.personal = personal;
         this.atencion = atencion;
+        this.clientes = new clientela(30, "vaqueros, camisa");
     }
     
     //este metodo nos permite saber la cantidad de personal disponible 
@@ -44,6 +50,24 @@ public class Tienda {
         this.barrio = nuevoBarrio;
     }
 
+    public clientela getClientes() {
+        return clientes;
+    }
+
+    public void setClientes(clientela clientes) {
+        this.clientes = clientes;
+    }
+
+    public cajero getElCajero() {
+        return elCajero;
+    }
+
+    public void setElCajero(cajero elCajero) {
+        this.elCajero = elCajero;
+    }
+
+    
+    
     public String getDuenoDeLaTienda() {
         return duenoDeLaTienda;
     }
@@ -100,30 +124,19 @@ public class Tienda {
                 2500,
                 20,
                 true);
-        Tienda tiendaDos = new Tienda(
-                "santafe",
-                "decoraciones",
-                "salomia",
-                3500,
-                15,
-                false);
         
-        System.out.println(tiendaUno.getDuenoDeLaTienda());
-        System.out.println(tiendaUno.getProductos());
-        System.out.println(tiendaUno.getBarrio());
-        System.out.println(tiendaUno.getPrecios());
-        System.out.println(tiendaUno.getPersonal());
-        System.out.println(tiendaUno.getAtencion());
+        clientela clientesDeLaTienda = new clientela(
+                30, 
+                "vestidos,zapatos, medias, sombreros");
         
-        tiendaUno.cantidadDepersonal();
+        tiendaUno.setClientes(tiendaUno);
         
-        System.out.println(tiendaUno.getDuenoDeLaTienda());
-        System.out.println(tiendaUno.getProductos());
-        System.out.println(tiendaUno.getBarrio());
-        System.out.println(tiendaUno.getPrecios());
-        System.out.println(tiendaUno.getPersonal());
-        System.out.println(tiendaUno.getAtencion());
-     
+        System.out.println("Cantidad de cliente en un dia es:");
+        
+        System.out.println(tiendaUno.getClientes().getCantidad());
+        System.out.println("productos vendidos:");
+        System.out.println(tiendaUno.getClientes().getProductoComprado());
     }
     
 }
+
