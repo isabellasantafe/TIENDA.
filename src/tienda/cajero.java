@@ -1,11 +1,11 @@
 package tienda;
 
 
-class cajero {
+class Cajero {
     private int edad;
     private int cantidadRecogida;
 
-    public cajero(int edad, int cantidadRecogida) {
+    public Cajero(int edad, int cantidadRecogida) {
         this.edad = edad;
         this.cantidadRecogida = cantidadRecogida;
     }

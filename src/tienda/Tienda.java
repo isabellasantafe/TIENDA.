@@ -12,8 +12,8 @@ public class Tienda {
 
     //Atributos de compocision//
     
-    private clientela clientes = null; 
-    private cajero elCajero;
+    private Clientela clientes = null; 
+    private Cajero elCajero;
 
     public Tienda(
             String duenoDeLaTienda, 
@@ -28,7 +28,7 @@ public class Tienda {
         this.precios = precios;
         this.personal = personal;
         this.atencion = atencion;
-        this.clientes = new clientela(30, "vaqueros, camisa");
+        this.clientes = new Clientela(30, "vaqueros, camisa");
     }
     
     //este metodo nos permite saber la cantidad de personal disponible 
@@ -50,19 +50,19 @@ public class Tienda {
         this.barrio = nuevoBarrio;
     }
 
-    public clientela getClientes() {
+    public Clientela getClientes() {
         return clientes;
     }
 
-    public void setClientes(clientela clientes) {
+    public void setClientes(Clientela clientes) {
         this.clientes = clientes;
     }
 
-    public cajero getElCajero() {
+    public Cajero getElCajero() {
         return elCajero;
     }
 
-    public void setElCajero(cajero elCajero) {
+    public void setElCajero(Cajero elCajero) {
         this.elCajero = elCajero;
     }
 
@@ -125,7 +125,7 @@ public class Tienda {
                 20,
                 true);
         
-        clientela clientesDeLaTienda = new clientela(
+        Clientela clientesDeLaTienda = new Clientela(
                 30, 
                 "vestidos,zapatos, medias, sombreros");
         

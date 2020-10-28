@@ -1,11 +1,11 @@
 package tienda;
 
 
-class clientela {
+class Clientela {
     private int cantidad;
     private String productoComprado;
 
-    public clientela(int cantidad, String productoComprado) {
+    public Clientela(int cantidad, String productoComprado) {
         this.cantidad = cantidad;
         this.productoComprado = productoComprado;
     }
