@@ -18,9 +18,7 @@ public class SedeUno extends Tienda {
                 barrio, 
                 precios, 
                 personal, 
-                atencion, 
-                nombreDeLaSedeUno, 
-                nuevaColeccion);
+                atencion);
         this.nombreDeLaSedeUno = nombreDeLaSedeUno;
         this.nuevaColeccion = nuevaColeccion;
     }

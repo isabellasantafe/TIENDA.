@@ -1,4 +1,4 @@
-package Tienda;
+package tienda;
 
 
 public class Tienda {
@@ -129,7 +129,7 @@ public class Tienda {
                 30, 
                 "vestidos,zapatos, medias, sombreros");
         
-        tiendaUno.setClientes(tiendaUno);
+        tiendaUno.setClientes(clientesDeLaTienda);
         
         System.out.println("Cantidad de cliente en un dia es:");
         

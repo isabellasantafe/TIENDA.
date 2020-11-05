@@ -22,10 +22,7 @@ public class SedeDos extends Tienda{
                 barrio, 
                 precios, 
                 personal, 
-                atencion, 
-                nombreDeLaSedeDos, 
-                nuevoDiseñador,
-                ropaExhibida);
+                atencion);
         this.nombreDeLaSedeDos = nombreDeLaSedeDos;
         this.nuevoDiseñador = nuevoDiseñador;
         this.ropaExhibida = ropaExhibida;
